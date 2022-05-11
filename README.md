@@ -2,7 +2,7 @@ XPrivacyLua
 ===========
 
 
-Really simple to use privacy manager for Android 6-10 (successor of [XPrivacy](https://forum.xda-developers.com/t/xprivacy-the-ultimate-yet-easy-to-use-privacy-manager.2320783/)).
+Really simple to use privacy manager for Android 6-12 (successor of [XPrivacy](https://forum.xda-developers.com/xposed/modules/xprivacy-ultimate-android-privacy-app-t2320783"]XPrivacy[/URL])).
 
 Revoking Android permissions from apps often let apps crash or malfunction.
 XPrivacyLua solves this by feeding apps fake data instead of real data.
@@ -66,9 +66,9 @@ Compatibility
 -------------
 
 XPrivacyLua is supported on Android 6.0 Marshmallow and later.
-For Android 4.0.3 KitKat to Android 5.1.1 Lollipop you can use [XPrivacy](https://github.com/M66B/XPrivacy/blob/master/README.md).
+For Android 4.0.3 KitKat to Android 5.1.1 Lollipop you can use [XPrivacy](https://github.com/M66B/XPrivacy/blob/master/README.md) (unsupported though).
 
-XPrivacyLua was tested with the original Xposed framework only.
+XPrivacyLua is supported for smartphones and tablets only. XPrivacyLua is not supported on emulators.
 
 Hooking *com.google.android.gms.location.ActivityRecognitionResult.extractResult* (restriction *Determine activity*)
 is known to fail with *script:25 vm error: java.lang.ClassNotFoundException: com.google.android.gms.location.DetectedActivity*
@@ -79,11 +79,10 @@ Installation
 
 * Install [Magisk](https://www.xda-developers.com/how-to-install-magisk/)
 * Android 6-7: download, install, and activate [Xposed](http://forum.xda-developers.com/xposed)
-* Android 8-10: download, install, and activate [EdXposed](https://forum.xda-developers.com/xposed/development/official-edxposed-successor-xposed-t4070199)
-* Android 11: XPrivacyLua mostly works, but is not supported yet. [See here](https://android.stackexchange.com/questions/231176/how-to-install-edxposed-on-android-11-what-about-safety-net) about installing EdXposed.
+* Android 8-12: download, install, and activate [LSPosed](https://forum.xda-developers.com/t/lsposed-xposed-framework-8-0-11-0-edxposed-alternetive.4228973/) ~~or [EdXposed](https://forum.xda-developers.com/t/official-edxposed-the-successor-of-xposed-oreo-pie-q-r-2020-07-19.4070199)~~
 * Download, install, and activate [XPrivacyLua](http://repo.xposed.info/module/eu.faircode.xlua)
 
-Please make sure that Android (framework) and the Android settings provider (com.android.providers.settings) are being restricted (in the 'scope').
+LSPosed: please make sure that any app you want to restrict is [in the 'scope'](https://github.com/LSPosed/LSPosed/wiki/How-to-use-it#install--activate-modules) of LSposed.
 
 Certificate fingerprints:
 
@@ -101,9 +100,7 @@ Support
 
 Only the XPrivacyLua version released in the Xposed repository is supported.
 
-XPrivacyLua is supported with the original Xposed framework only.
-
-XPrivacyLua with [Island](http://forum.xda-developers.com/android/-t3366295) is not supported.
+XPrivacyLua with [Island](http://forum.xda-developers.com/android/-t3366295), etc is not supported.
 
 * For support on Xposed, please go [here](http://forum.xda-developers.com/xposed)
 * For support on XPrivacyLua, please go [here](https://forum.xda-developers.com/xposed/modules/xprivacylua6-0-android-privacy-manager-t3730663)
@@ -151,7 +148,7 @@ License
 
 [GNU General Public License version 3](https://www.gnu.org/licenses/gpl.txt)
 
-Copyright (c) 2017-2018 Marcel Bokhorst. All rights reserved
+Copyright (c) 2017-2021 Marcel Bokhorst. All rights reserved
 
 XPrivacyLua is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
